@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasForing - Order Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">GasForing</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#order">Order</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Welcome to GasForing</h1>
+        <p>Quality Products. Easy Ordering.</p>
+        <a href="#products" class="shop-btn">Shop Now</a>
+    </div>
+</section>
+
+<section id="products" class="products">
+    <h2>Our Products</h2>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placehold.co/400x250?text=Pager+01" alt="Pager 01">
+            <h3>Pager Model 01</h3>
+            <p>৳ 1200</p>
+            <button onclick="selectProduct('Pager Model 01')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://placehold.co/400x250?text=Pager+02" alt="Pager 02">
+            <h3>Pager Model 02</h3>
+            <p>৳ 1500</p>
+            <button onclick="selectProduct('Pager Model 02')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://placehold.co/400x250?text=Pager+03" alt="Pager 03">
+            <h3>Pager Model 03</h3>
+            <p>৳ 1800</p>
+            <button onclick="selectProduct('Pager Model 03')">Order Now</button>
+        </div>
+    </div>
+</section>
+
+<section id="order" class="order-section">
+    <h2>Place Your Order</h2>
+    <p>Fill in your details below</p>
+
+    <form id="orderForm">
+
+        <input id="customerName" type="text"
+            placeholder="Your Full Name" required>
+
+        <input id="phone" type="tel"
+            placeholder="Your Phone Number" required>
+
+        <select id="product" required>
+            <option value="">Select Product</option>
+            <option value="Pager Model 01">Pager Model 01 - ৳1200</option>
+            <option value="Pager Model 02">Pager Model 02 - ৳1500</option>
+            <option value="Pager Model 03">Pager Model 03 - ৳1800</option>
+        </select>
+
+        <input id="quantity" type="number"
+            placeholder="Quantity" min="1" value="1" required>
+
+        <textarea id="address"
+            placeholder="Full Delivery Address" required></textarea>
+
+        <button type="button" id="locationBtn">
+            📍 Share My Location
+        </button>
+
+        <p id="locationStatus">Location not shared (optional)</p>
+
+        <h3>Payment by bKash</h3>
+
+        <p class="payment-info">
+            Send Money to:01570237061
+            <br>
+            Enter your bKash Transaction ID below.
+        </p>
+
+        <input id="transactionId" type="text"
+            placeholder="bKash Transaction ID" required>
+
+        <button type="submit" class="submit-btn">
+            PLACE ORDER
+        </button>
+
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<footer>
+    <p>© 2026 GasForing. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
